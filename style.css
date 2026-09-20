@@ -49,3 +49,107 @@ footer{background:#0c1325;color:#8f9bb9}
 @media(max-width:850px){
   .profile-wrap{width:160px;height:160px}
 }
+
+/* v5 — larger portrait + graphical hero treatment */
+.focus-card{
+  position:relative;
+  overflow:hidden;
+  min-height:610px;
+  padding:38px 40px 42px;
+}
+.portrait-stage{
+  position:relative;
+  width:min(100%,420px);
+  height:330px;
+  margin:-8px auto 24px;
+  flex:0 0 auto;
+  display:grid;
+  place-items:center;
+}
+.profile-wrap{
+  position:relative;
+  z-index:5;
+  width:285px;
+  height:285px;
+  margin:0;
+  padding:7px;
+  border-radius:46% 54% 50% 50% / 48% 45% 55% 52%;
+  background:linear-gradient(145deg,#7ea1ff 5%,#c7b8ff 48%,#ffad91 100%);
+  box-shadow:
+    0 28px 70px rgba(0,0,0,.34),
+    0 0 0 1px rgba(255,255,255,.08);
+  transform:rotate(-2deg);
+}
+.profile-photo{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center 34%;
+  border-radius:44% 56% 48% 52% / 48% 44% 56% 52%;
+  border:5px solid #15213b;
+  transform:rotate(2deg);
+}
+.orbit{
+  position:absolute;
+  display:block;
+  border:1px solid rgba(126,161,255,.42);
+  border-radius:50%;
+  z-index:1;
+}
+.orbit-one{
+  width:345px;height:255px;
+  transform:rotate(-20deg);
+}
+.orbit-two{
+  width:390px;height:205px;
+  border-color:rgba(255,173,145,.32);
+  transform:rotate(22deg);
+}
+.portrait-stage:before{
+  content:"";
+  position:absolute;
+  width:245px;height:245px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(126,161,255,.24),rgba(126,161,255,0) 70%);
+  filter:blur(4px);
+}
+.spark{
+  position:absolute;
+  z-index:6;
+  width:12px;height:12px;
+  border-radius:50%;
+  background:#ffad91;
+  box-shadow:0 0 22px rgba(255,173,145,.8);
+}
+.spark-one{right:28px;top:70px}
+.spark-two{left:38px;bottom:55px;width:8px;height:8px;background:#9db7ff;box-shadow:0 0 20px rgba(126,161,255,.9)}
+.h2-badge{
+  position:absolute;
+  z-index:7;
+  right:8px;
+  bottom:42px;
+  width:62px;height:62px;
+  display:grid;
+  place-items:center;
+  border-radius:18px;
+  background:#ffad91;
+  color:#11182b;
+  font-size:23px;
+  font-weight:800;
+  box-shadow:0 14px 35px rgba(0,0,0,.25);
+  transform:rotate(7deg);
+}
+.h2-badge sub{font-size:.55em}
+.focus-card .small{margin-top:4px}
+@media(min-width:1200px){
+  .hero{grid-template-columns:1.25fr .82fr;gap:6vw}
+  .focus-card{min-width:440px}
+}
+@media(max-width:850px){
+  .focus-card{min-height:auto}
+  .portrait-stage{height:300px}
+  .profile-wrap{width:250px;height:250px}
+  .orbit-one{width:300px;height:220px}
+  .orbit-two{width:330px;height:180px}
+}
