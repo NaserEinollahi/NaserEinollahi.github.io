@@ -61,3 +61,20 @@ footer{background:#0c1325;color:#8f9bb9}
 .dot{position:absolute;width:8px;height:8px;border-radius:50%;z-index:5}.dot-one{background:#7ea1ff;left:5%;top:55%}.dot-two{background:#ffad91;right:5%;top:27%}
 @media(max-width:1100px){.profile-stage{height:300px}.profile-stage .profile-wrap{width:220px;height:220px}.orbit-one{width:290px;height:195px}.orbit-two{width:260px;height:275px}.float-key{font-size:9px;padding:8px 10px}}
 @media(max-width:850px){.profile-stage{max-width:420px;margin:0 auto 20px}.profile-stage .profile-wrap{width:230px;height:230px}}
+
+/* v6 research-profile links */
+.profile-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px;max-width:760px}
+.profile-links a{display:flex;align-items:center;gap:8px;padding:8px 11px;border:1px solid #354568;border-radius:999px;background:rgba(18,29,53,.55);font-size:11px;color:#cbd6f2;transition:.2s ease}
+.profile-links a:hover{transform:translateY(-2px);border-color:#7ea1ff;background:#1b2a4b;color:#fff}
+.profile-links b{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#eaf0ff;color:#15203a;font-size:10px;letter-spacing:-.02em}
+.profile-links a:last-child b{background:#ffad91}
+
+/* v6 conferences */
+.conference-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.conference-grid article{padding:30px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#17223b,#141d33);min-height:245px;position:relative;overflow:hidden}
+.conference-grid article:after{content:"";position:absolute;width:110px;height:110px;border:1px solid rgba(126,161,255,.16);border-radius:50%;right:-40px;bottom:-40px}
+.conf-date{font-size:10px;letter-spacing:.13em;font-weight:700;color:#8eabff}
+.conference-grid h3{font-size:21px;line-height:1.35;margin:30px 0 12px}
+.conference-grid p{line-height:1.6;color:#a9b4d0}
+.conference-grid a{color:#ffb49b;font-weight:700;font-size:13px}
+@media(max-width:850px){.conference-grid{grid-template-columns:1fr}.profile-links span{display:none}.profile-links a{padding:7px}}
